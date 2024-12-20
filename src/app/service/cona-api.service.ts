@@ -2,12 +2,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConaApiService {
-  private apiUrl = 'http://172.16.6.85:5051/ask'; // Replace with your backend URL
+  private apiUrl = environment.apiUrl; // Replace with your backend URL
 
   constructor(private http: HttpClient) {}
 
