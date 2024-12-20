@@ -100,12 +100,16 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "71948f6d-1b66-4c43-9e32-6dd0dbadc89b"
   }
 }

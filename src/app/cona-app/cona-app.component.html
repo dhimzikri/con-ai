@@ -1,0 +1,27 @@
+<!-- src/app/modules/ask/page/page.component.html -->
+<div class="container chat-container">
+  <h1>Ask CONA</h1>
+  <div class="chat-box">
+    <div class="chat-log">
+      <!-- Add past conversation messages dynamically here -->
+      <div *ngIf="answer" class="chat-message">
+        <div class="message bot-message">
+          <strong>CONA:</strong> {{ answer }}
+        </div>
+      </div>
+    </div>
+    <form (ngSubmit)="askCona()" class="chat-input-form" name="askCona">
+      <textarea
+        id="question"
+        rows="1"
+        [(ngModel)]="question"
+        name="question"
+        class="chat-input"
+        placeholder="Type your question here..."
+        (keydown.enter)="onEnterPress($event)"
+        required
+      ></textarea>
+      <button type="submit" class="btn-submit">Send</button>
+    </form>
+  </div>
+</div>
